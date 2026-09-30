@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <style>
+    /* base layout and typography*/
+    body { font-family: sans-serif; padding: 20px; }
+    /*different style for completed tasks*/
+    .done { text-decoration: line-through; color: gray; }
+    /*error message styling*/
+    .error { color: red; }
+    li { margin-bottom: 8px; cursor: pointer; }
+    button.delete { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h1>My To-Do List</h1>
+  <!--task input form-->
+  <form id="taskForm">
+    <input type="text" id="taskInput" placeholder="New task...">
+    <button type="submit">Add Task</button>
+  </form>
+  <!--container for displaying validation error messages-->
+  <p class="error" id="errorMsg"></p>
+  <!--dynamic list container, javascript will clear and populate this ul dynamically from the tasks array using DOM manipulation-->
+  <ul id="list"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
